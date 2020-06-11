@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 public class StringCalculator {
-	
-	public StringCalculator() {
-
-	}
 
 	// check the number of minus
 	public static int checkminus(String s) {
