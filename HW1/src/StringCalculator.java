@@ -16,6 +16,7 @@ public class StringCalculator {
 
 	public static double addition(String s) {
 		int strlen = s.length();
+		//finding the location of +
 		int plusplace = s.indexOf("+");
 		String op1 = s.substring(0, plusplace);
 		String op2 = s.substring(plusplace + 1, strlen);
@@ -26,6 +27,7 @@ public class StringCalculator {
 
 	public static double subtraction(String s) {
 		int strlen1 = s.length();
+		//finding the location of -
 		int minusplace = s.indexOf("-");
 		int minusplace1 = s.lastIndexOf("-");
 		if (minusplace == minusplace1) {
@@ -45,6 +47,7 @@ public class StringCalculator {
 
 	public static double multiply(String s) {
 		int strlen2 = s.length();
+		//finding the location of *
 		int multiplace = s.indexOf("*");
 		String op1 = s.substring(0, multiplace);
 		String op2 = s.substring(multiplace + 1, strlen2);
@@ -55,11 +58,13 @@ public class StringCalculator {
 
 	public static double divide(String s) {
 		int strlen3 = s.length();
+		//finding the location of /
 		int diviplace = s.indexOf("/");
 		String op1 = s.substring(0, diviplace);
 		String op2 = s.substring(diviplace + 1, strlen3);
 		double convertop1 = Double.parseDouble(op1);
 		double convertop2 = Double.parseDouble(op2);
+		// if divide by 0
 		if (convertop2 == 0) {
 			return 0;
 		} else {
